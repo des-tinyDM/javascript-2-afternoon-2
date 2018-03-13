@@ -188,8 +188,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
 
-//CODE HERE
+function removeItem(myGroceryList, item){
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i]===item){
+      myGroceryList.splice(myGroceryList[i], 1);
+    }
+  }
+  return myGroceryList;
+}
 
+
+function addItem(myGroceryList, item){
+  var addThis = myGroceryList.indexOf(item);
+  if(myGroceryList[addThis] !== item){
+    myGroceryList.push(item);
+
+    }
+    return myGroceryList;
+}
 ////////// PROBLEM 9 //////////
 
 /*
@@ -216,9 +232,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
-
-
+function addTen(numbers){
+  let numbersCheck = numbers.map(Number);
+  for (i=0;i<numbersCheck.length;i++){
+    numbersCheck[i]+=10;
+  }
+  return numbersCheck;
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -260,6 +280,17 @@ function longer(arr1,arr2){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
+function both(arr1,arr2){
+  newArr = [];
+  for (let i=0;i<arr1.length;i++){
+    for (let arr2i = 0;arr2i < arr2.length; arr2i++){
+      if (arr1[i] === arr2[arr2i])
+        newArr.push(arr1[i]);
+    }
+  }
+  return newArr;
+}
+
 
 ////////// PROBLEM 12 //////////
 
@@ -294,20 +325,23 @@ var colt = {
 /*
   Above you're given an empty array with four objects. 
   Fill the devMountainEmployees array with those four objects. 
-  After that console.log the length of the Array and make sure that it's equal to 4. 
-*/
+  After that console.log the length of the Array and make sure that it's equal to 4.
 
-//Code Here
-
-
-
-/*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+devMountainEmployees = [tyler,cahlan,ryan,colt];
 
+console.log(devMountainEmployees.length);
+
+
+    for(var i = 0; i < devMountainEmployees.length; i++){
+      if(devMountainEmployees[i].name === 'Cahlan'){
+        devMountainEmployees.splice(i,1);
+      }
+    }
+    
 
 
 ////////// PROBLEM 13 //////////
