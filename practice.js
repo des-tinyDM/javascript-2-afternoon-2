@@ -71,13 +71,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 function reversedLooper(letters){
-for (let i = letters.length - 1; i > -1 ; i--){
-  //alert(letters[i]);
-  console.log(letters[i]);
+for (let i = letters.length - 1; i > -1 ; i--) {
+  alert(letters[i]);
   }     
-} 
-
-
+}
+reversedLooper(letters);
 
 ////////// PROBLEM 5 //////////
 
@@ -99,7 +97,6 @@ function evenFinder(nums){
   }
   return evenNums;
 }
-sdfsf
 
 
 ////////// EXTRA PRACTICE PROBLEMS BELOW //////////
